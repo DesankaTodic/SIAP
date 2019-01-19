@@ -1,0 +1,49 @@
+koraci:
+
+1. uklanjanje anketa od 6-9 sastanka (6 <= wave <= 9) zbog toga sto je ocjenjivanje 6 osnovnih atributa bilo 
+u drugacijem formatu od ostalih sastanka (recimo ocjena 15.028 - nominalnog tipa)
+
+2. uklanjanje sljedecih atributa
+-zanima nas samo sta mi trazimo u suprotnom polu, a ne sta oni traze u nama 
+(niti nas zanima samoocjenjivanje)
+
+attr4_1|sinc4_1|intel4_1|fun4_1|amb4_1|shar4_1|
+attr2_1|sinc2_1|intel2_1|fun2_1|amb2_1|shar2_1|
+attr3_1|sinc3_1|intel3_1|fun3_1|amb3_1|
+attr5_1|sinc5_1|intel5_1|fun5_1|amb5_1|
+attr3_s|sinc3_s|intel3_s|fun3_s|amb3_s|
+attr4_2|sinc4_2|intel4_2|fun4_2|amb4_2|shar4_2|
+attr2_2|sinc2_2|intel2_2|fun2_2|amb2_2|shar2_2|
+attr3_2|sinc3_2|intel3_2|fun3_2|amb3_2|
+attr5_2|sinc5_2|intel5_2|fun5_2|amb5_2|
+attr4_3|sinc4_3|intel4_3|fun4_3|amb4_3|shar4_3|
+attr2_3|sinc2_3|intel2_3|fun2_3|amb2_3|shar2_3|
+attr3_3|sinc3_3|intel3_3|fun3_3|amb3_3|
+attr5_3|sinc5_3|intel5_3|fun5_3|amb5_3
+
+3. normalizacija 6 osnovnih atributa kroz faze
+//numericki - odmah normalizovani u rasponu 0-1
+attr1_1|sinc1_1|intel1_1|fun1_1|amb1_1|shar1_1|
+attr1_2|sinc1_2|intel1_2|fun1_2|amb1_2|shar1_2|
+attr1_3|sinc1_3|intel1_3|fun1_3|amb1_3|shar1_3|
+
+//nominalni - transformisani u numericke, pa normalizovani u rasponu 0-1
+attr1_s|sinc1_s|intel1_s|fun1_s|amb1_s|shar1_s|
+attr7_2|sinc7_2|intel7_2|fun7_2|amb7_2|shar7_2|
+attr7_3|sinc7_3|intel7_3|fun7_3|amb7_3|shar7_3
+
+
+4. izbacivanje onih koji nisu numericki da bismo primjenili KNN
+field|field_cd|undergra|mn_sat|tuition|race|from|zipcode|income
+
+5. uraditi korelaciju 1_3 7_2 ? napisati koliko 7_2 utice na 1_3
+
+5. ostavljeni atrbuti za python knn:
+gender:	Female=0
+	Male=1
+number of people that met in wave
+
+
+6. female 3403
+male 3413
+
